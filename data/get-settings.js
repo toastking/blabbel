@@ -155,6 +155,28 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   	  newchar = "\u0947";////////////////////////////////End E Sounds
     }
   }
+  else if(keytoreplace == 79) {////////////////////////////////O sounds
+  	if(previouskeytyped == keytoreplace) {
+  	  if(previouscharactertyped == "\u094B") {
+        newchar = "\u094C";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u094C") {
+        newchar = "\u0913";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0913") {
+        newchar = "\u0914";
+        offset = -1;
+      }
+      else {
+  	    newchar = "\u094B";
+  	  }
+  	}
+  	else {
+  	  newchar = "\u094B";////////////////////////////////End O Sounds
+    }
+  }
   ////////////////////////////////End Vowels
   ////////////////////////////////Consonants
   else if(keytoreplace == 75) {////////////////////////////////Ka Sounds
