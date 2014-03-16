@@ -111,6 +111,28 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   	  newchar = "\u093F";////////////////////////////////End I Sounds
     }
   }
+  else if(keytoreplace == 85) {////////////////////////////////U sounds
+  	if(previouskeytyped == keytoreplace) {
+  	  if(previouscharactertyped == "\u0941") {
+        newchar = "\u0942";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0942") {
+        newchar = "\u0909";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0909") {
+        newchar = "\u090A";
+        offset = -1;
+      }
+      else {
+  	    newchar = "\u0941";
+  	  }
+  	}
+  	else {
+  	  newchar = "\u0941";////////////////////////////////End U Sounds
+    }
+  }
   ////////////////////////////////End Vowels
   ////////////////////////////////Consonants
   else if(keytoreplace == 75) {////////////////////////////////Ka Sounds
