@@ -271,6 +271,20 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   	  newchar = "\u0930";////////////////////////////////End Ra Sounds
     //}
   }
+  else if(keytoreplace == 86) {////////////////////////////////Va Sounds
+  	//if(previouskeytyped == keytoreplace) {
+  	//  if(previouscharactertyped == "\u0915") {
+    //    newchar = "\u0916";
+    //    offset = -1;
+    //  }
+    //  else {
+  	//    newchar = "\u0915";
+  	//  }
+  	//}
+  	//else {
+  	  newchar = "\u0935";////////////////////////////////End Va Sounds
+    //}
+  }
   ////////////////////////////////End Consonants
   else {
 
