@@ -71,13 +71,23 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   }
   ////////////////////////////////End Numbers
   ////////////////////////////////Vowels
-  else if(keytoreplace == 65) {
-  	if(consonants.indexOf(previouskeytyped) > -1) {
-  	  newchar = "\u093E"
+  else if(keytoreplace == 65) {////////////////////////////////A sounds
+  	if(previouskeytyped == keytoreplace) {
+  	  if(previouscharactertyped == "\u093E") {
+        newchar = "\u0905";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0905") {
+        newchar = "\u0906";
+        offset = -1;
+      }
+      else {
+  	    newchar = "\u093E";
+  	  }
   	}
   	else {
-  	  newchar = "\u0905";
-	}
+  	  newchar = "\u093E";////////////////////////////////End A Sounds
+    }
   }
   else if(keytoreplace == 79) {
   	if(consonants.indexOf(previouskeytyped) > -1) {
