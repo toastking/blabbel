@@ -89,13 +89,27 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   	  newchar = "\u093E";////////////////////////////////End A Sounds
     }
   }
-  else if(keytoreplace == 79) {
-  	if(consonants.indexOf(previouskeytyped) > -1) {
-  	  newchar = "\u094B"
+  else if(keytoreplace == 73) {////////////////////////////////I sounds
+  	if(previouskeytyped == keytoreplace) {
+  	  if(previouscharactertyped == "\u093F") {
+        newchar = "\u0940";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0940") {
+        newchar = "\u0907";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0907") {
+        newchar = "\u0908";
+        offset = -1;
+      }
+      else {
+  	    newchar = "\u093F";
+  	  }
   	}
   	else {
-  	  newchar = "\u0913";
-	}
+  	  newchar = "\u093F";////////////////////////////////End I Sounds
+    }
   }
   ////////////////////////////////End Vowels
   ////////////////////////////////Consonants
