@@ -229,6 +229,20 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   	  newchar = "\u0938";////////////////////////////////End Sibilant Sounds
     }
   }
+  else if(keytoreplace == 89) {////////////////////////////////Ya Sounds
+  	//if(previouskeytyped == keytoreplace) {
+  	//  if(previouscharactertyped == "\u0915") {
+    //    newchar = "\u0916";
+    //    offset = -1;
+    //  }
+    //  else {
+  	//    newchar = "\u0915";
+  	//  }
+  	//}
+  	//else {
+  	  newchar = "\u092F";////////////////////////////////End Ya Sounds
+    //}
+  }
   ////////////////////////////////End Consonants
   else {
 
