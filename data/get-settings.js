@@ -18,6 +18,10 @@ textArea.addEventListener('keydown', function onkeyup(event) {
 	    replacewithhindi(event.keyCode, window.previouskeytyped);
 	  }
 	}
+	else {
+		window.previouskeytyped = event.keyCode;
+        window.previouscharactertyped = "";
+	}
   }
 }, false);
 
@@ -205,6 +209,24 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   	}
   	else {
   	  newchar = "\u0919";////////////////////////////////End Na Sounds
+    }
+  }
+  else if(keytoreplace == 83) {////////////////////////////////Sibilant Sounds
+  	if(previouskeytyped == keytoreplace) {
+      if(previouscharactertyped == "\u0938") {
+        newchar = "\u0937";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0937") {
+        newchar = "\u0936";
+        offset = -1;
+      }
+      else {
+  	    newchar = "\u0938";
+  	  }
+  	}
+  	else {
+  	  newchar = "\u0938";////////////////////////////////End Sibilant Sounds
     }
   }
   ////////////////////////////////End Consonants
