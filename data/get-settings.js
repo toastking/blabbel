@@ -133,6 +133,28 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   	  newchar = "\u0941";////////////////////////////////End U Sounds
     }
   }
+  else if(keytoreplace == 69) {////////////////////////////////E sounds
+  	if(previouskeytyped == keytoreplace) {
+  	  if(previouscharactertyped == "\u0947") {
+        newchar = "\u0948";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0948") {
+        newchar = "\u090F";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u090F") {
+        newchar = "\u0910";
+        offset = -1;
+      }
+      else {
+  	    newchar = "\u0947";
+  	  }
+  	}
+  	else {
+  	  newchar = "\u0947";////////////////////////////////End E Sounds
+    }
+  }
   ////////////////////////////////End Vowels
   ////////////////////////////////Consonants
   else if(keytoreplace == 75) {////////////////////////////////Ka Sounds
