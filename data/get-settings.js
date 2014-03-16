@@ -421,10 +421,10 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   	  newchar = "\u0932";////////////////////////////////End La Sounds
     }
   }
+  ////////////////////////////////End Consonants
   else if(keytoreplace == 77) {////////////////////////////////Virama
   	newchar = "\u094D";////////////////////////////////End Virama
   }
-  ////////////////////////////////End Consonants
   else {
 
   }
