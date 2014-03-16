@@ -12,7 +12,7 @@ languageselector.addEventListener('change', function ondropdownchange(event) {
 
 textArea.addEventListener('keydown', function onkeyup(event) {
   if (languageselector.value != "en") {
-    if (event.keyCode >= 65 && event.keyCode <= 90) {
+    if ((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 65 && event.keyCode <= 90)) {
       event.preventDefault();
 	  if (languageselector.value == "hi") {
 	    replacewithhindi(event.keyCode, window.previouskeytyped);
@@ -38,8 +38,40 @@ function replacewithhindi(keytoreplace, previouskeytyped) {
   var endPos = textArea.selectionEnd;
   var offset = 0;
   //self.port.emit("language-code", previouskeytyped);
+  ////////////////////////////////Numbers
+  if(keytoreplace == 48) {////////////////////////////////0
+  	newchar = "\u0966";
+  }
+  else if(keytoreplace == 49) {////////////////////////////////1
+  	newchar = "\u0967";
+  }
+  else if(keytoreplace == 50) {////////////////////////////////2
+  	newchar = "\u0968";
+  }
+  else if(keytoreplace == 51) {////////////////////////////////3
+  	newchar = "\u0969";
+  }
+  else if(keytoreplace == 52) {////////////////////////////////4
+  	newchar = "\u096A";
+  }
+  else if(keytoreplace == 53) {////////////////////////////////5
+  	newchar = "\u096B";
+  }
+  else if(keytoreplace == 54) {////////////////////////////////6
+  	newchar = "\u096C";
+  }
+  else if(keytoreplace == 55) {////////////////////////////////7
+  	newchar = "\u096D";
+  }
+  else if(keytoreplace == 56) {////////////////////////////////8
+  	newchar = "\u096E";
+  }
+  else if(keytoreplace == 57) {////////////////////////////////9
+  	newchar = "\u096F";
+  }
+  ////////////////////////////////End Numbers
   ////////////////////////////////Vowels
-  if(keytoreplace == 65) {
+  else if(keytoreplace == 65) {
   	if(consonants.indexOf(previouskeytyped) > -1) {
   	  newchar = "\u093E"
   	}
