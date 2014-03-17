@@ -211,6 +211,10 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
         newchar = "\u091D";
         offset = -1;
       }
+      else if(previouscharactertyped == "\u091D") {
+        newchar = "\u095B";
+        offset = -1;
+      }
       else {
   	    newchar = "\u091C";
   	  }
