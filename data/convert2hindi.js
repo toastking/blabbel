@@ -425,11 +425,11 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
         offset = -1;
       }
       else if(previouscharactertyped == "\u0964") {
-       newchar = "\u0965";
+        newchar = "\u0965";
         offset = -1;
       }
       else if(previouscharactertyped == "\u0965") {
-       newchar = "\u0970";
+        newchar = "\u0970";
         offset = -1;
       }
       else {
