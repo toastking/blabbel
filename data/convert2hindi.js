@@ -157,6 +157,14 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
         newchar = "\u0916";
         offset = -1;
       }
+      else if(previouscharactertyped == "\u0916") {
+        newchar = "\u0958";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0958") {
+        newchar = "\u0959";
+        offset = -1;
+      }
       else {
   	    newchar = "\u0915";
   	  }
