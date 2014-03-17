@@ -466,7 +466,7 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
     }
   }
   else {
-
+    return false;
   }
   window.previouskeytyped = keytoreplace;
   window.previouscharactertyped = newchar;
@@ -475,4 +475,5 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
     selectedText = textArea.value.substring(startPos, endPos)
     textArea.value = content.slice(0, startPos + offset) + newchar + content.slice(endPos);
     textArea.selectionStart = textArea.selectionEnd = startPos + 1 + offset;
+    return true;
 };
