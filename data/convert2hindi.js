@@ -372,18 +372,22 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
     //}
   }
   else if(keytoreplace == 82) {////////////////////////////////Ra Sounds
-  	//if(previouskeytyped == keytoreplace) {
-  	//  if(previouscharactertyped == "\u0915") {
-    //    newchar = "\u0916";
-    //    offset = -1;
-    //  }
-    //  else {
-  	//    newchar = "\u0915";
-  	//  }
-  	//}
-  	//else {
+  	if(previouskeytyped == keytoreplace) {
+  	  if(previouscharactertyped == "\u0930") {
+        newchar = "\u095C";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u095C") {
+        newchar = "\u095D";
+        offset = -1;
+      }
+      else {
+  	    newchar = "\u0930";
+  	  }
+  	}
+  	else {
   	  newchar = "\u0930";////////////////////////////////End Ra Sounds
-    //}
+    }
   }
   else if(keytoreplace == 86) {////////////////////////////////Va Sounds
   	//if(previouskeytyped == keytoreplace) {
