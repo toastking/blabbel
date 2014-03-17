@@ -444,6 +444,19 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
         newchar = "\u093D";
         offset = -1;
       }
+      else if(previouscharactertyped == "\u093D") {
+        newchar = "\u0901";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0901") {
+        newchar = "\u0902";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0902") {
+        newchar = "\u0950";
+        offset = -1;
+      }
+      
       else {
         newchar = "\u094D";
       }
