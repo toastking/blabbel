@@ -405,13 +405,13 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
   }
   else if(keytoreplace == 76) {////////////////////////////////La Sounds
   	if(previouskeytyped == keytoreplace) {
-  	 if(previouscharactertyped == "\u0932") {
-       newchar = "\u0933";
-       offset = -1;
-     }
-     else {
-  	   newchar = "\u0932";
-  	 }
+  	  if(previouscharactertyped == "\u0932") {
+        newchar = "\u0933";
+        offset = -1;
+      }
+      else {
+  	    newchar = "\u0932";
+  	  }
   	}
   	else {
   	  newchar = "\u0932";////////////////////////////////End La Sounds
@@ -420,17 +420,21 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
   ////////////////////////////////End Consonants
   else if(keytoreplace == 77) {////////////////////////////////Virama + Punctuation
     if(previouskeytyped == keytoreplace) {
-     if(previouscharactertyped == "\u094D") {
-       newchar = "\u0964";
-       offset = -1;
-     }
-     else if(previouscharactertyped == "\u0964") {
+      if(previouscharactertyped == "\u094D") {
+        newchar = "\u0964";
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0964") {
        newchar = "\u0965";
-       offset = -1;
-     }
-     else {
-       newchar = "\u094D";
-     }
+        offset = -1;
+      }
+      else if(previouscharactertyped == "\u0965") {
+       newchar = "\u0970";
+        offset = -1;
+      }
+      else {
+        newchar = "\u094D";
+      }
     }
     else {
       newchar = "\u094D";////////////////////////////////End Virama + Punctuation
