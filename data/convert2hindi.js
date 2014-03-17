@@ -1,3 +1,8 @@
+var consonants = [66,67,68,70,71,72,74,75,76,77,78,80,81,82,83,84,86,87,88,89,90];
+var vowels = [65,69,73,79,85];
+var previouskeytyped = 0;
+var previouscharactertyped = "";
+
 function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
   var newchar = "";
   var content = textArea.value
