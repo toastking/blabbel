@@ -414,8 +414,23 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
     }
   }
   ////////////////////////////////End Consonants
-  else if(keytoreplace == 77) {////////////////////////////////Virama
-  	newchar = "\u094D";////////////////////////////////End Virama
+  else if(keytoreplace == 77) {////////////////////////////////Virama + Punctuation
+    if(previouskeytyped == keytoreplace) {
+     if(previouscharactertyped == "\u094D") {
+       newchar = "\u0964";
+       offset = -1;
+     }
+     else if(previouscharactertyped == "\u0964") {
+       newchar = "\u0965";
+       offset = -1;
+     }
+     else {
+       newchar = "\u094D";
+     }
+    }
+    else {
+      newchar = "\u094D";////////////////////////////////End Virama + Punctuation
+    }
   }
   else {
 
