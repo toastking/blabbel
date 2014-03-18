@@ -10,16 +10,17 @@ function onkeydown(event) {
 	    if (lang == "hi") {
 	      replaced = replacewithhindi(document.activeElement, event.keyCode, window.previouskeytyped);
 	    }
-      if (replaced) {
-        self.port.emit("typing-begin", lang);
-      }
-      else {
+      if (!replaced) {
         self.port.emit("typing-end", lang);
       }
+      //else {
+      //  self.port.emit("typing-end", lang);
+      //}
 	  }
 	  else {
 	  	window.previouskeytyped = event.keyCode;
       window.previouscharactertyped = "";
+      window.count_prev_pressed = 0;
       self.port.emit("typing-end", lang);
 	  }
   }
@@ -30,6 +31,7 @@ function onkeydown(event) {
 function onmousedown(event) {
   window.previouskeytyped = 0;
   window.previouscharactertyped = "";
+  window.count_prev_pressed = 0;
   self.port.emit("typing-end", lang);
 }
 self.port.on("lang", function (text) {
