@@ -10,6 +10,9 @@ function onkeydown(event) {
 	    if (lang == "hi") {
 	      replaced = replacewithhindi(document.activeElement, event.keyCode, window.previouskeytyped);
 	    }
+      if (lang == "bn") {
+        replaced = replacewithbangla(document.activeElement, event.keyCode, window.previouskeytyped);
+      }
       if (!replaced) {
         self.port.emit("typing-end", lang);
       }
