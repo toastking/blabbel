@@ -1,4 +1,4 @@
-miniature-octo-robot
+Blabbel
 =====================
 A firefox extention to enable typing of non-latin scripts. 
 
