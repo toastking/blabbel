@@ -118,19 +118,3 @@ function replacewithhindi(textArea, keytoreplace, previouskeytyped) {
   textArea.selectionStart = textArea.selectionEnd = startPos + 1 + offset;
   return true;
 };
-
-function getReplacementFromArray(keytoreplace, inparray) {
-  if(keytoreplace != previouskeytyped) {
-      count_prev_pressed = 0;
-    }
-    repchar = inparray[count_prev_pressed];
-    if(count_prev_pressed > 0) {
-      offset = -1;
-    }
-    count_prev_pressed++;
-    if (count_prev_pressed >= inparray.length) {
-      count_prev_pressed = 0;
-    }
-    self.port.emit("typing-begin", inparray);
-    return repchar
-}
